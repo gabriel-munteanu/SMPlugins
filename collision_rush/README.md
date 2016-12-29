@@ -8,3 +8,5 @@ Because sometimes the push away effect is not enough , there is a *sm_unstuck / 
 *sm_cr_nocollision_time* - No collision time offset(after freeze time)
 
 *sm_cr_pushaway_time* - Push away time
+
+SourceMod: [plugin link](https://forums.alliedmods.net/showthread.php?p=2481531)
