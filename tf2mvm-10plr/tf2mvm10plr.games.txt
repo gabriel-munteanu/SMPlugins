@@ -1,0 +1,61 @@
+"Games"
+{
+	"tf"
+	{
+		"Addresses"
+		{
+			"PreClientUpdate"
+			{
+				"windows"
+				{
+					"signature"		"PreClientUpdate"
+				}
+				"linux"
+				{
+					"signature" 	"PreClientUpdate"
+				}
+			}
+			"Sig2"
+			{
+				"windows"
+				{
+					"signature"		"Signature2"
+				}
+				"linux"
+				{
+					"signature" 	"Signature2"
+				}
+			}
+			
+		}
+		"Offsets"
+		{
+			"MvMMaxPlayers_Offset"
+			{
+				"windows"	"711"
+				"linux"		"?"
+			}
+			"MvMMaxPlayers2_Offset"
+			{
+				"windows"	"225"
+				"linux"		"?"
+			}
+			
+		}
+		"Signatures"
+		{
+			"PreClientUpdate"
+			{
+				"library"		"server"
+				"windows"		"\x55\x8B\xEC\x83\xEC\x1C\x53\x56\x8B\xD9\x57\x89\x5D\xF8\xE8" //txt search: Setting sv_visiblemaxplayers to %d for MvM
+				"linux" 		"@CTFGCServerSystem::PreClientUpdate-NOT"  // You must set maxplayers to 32 to host M
+			}
+			"Signature2"
+			{
+				"library"		"server"
+				"windows"		"\x80\xBF\x6E\x09\x00\x00\x00\x0F\x84\xC2\x01\x00\x00\x8B\x4D" //txt search: mvm assigned %s to defending team (%d more slots)
+				"linux" 		"@dont_know"
+			}
+		}
+	}
+}
